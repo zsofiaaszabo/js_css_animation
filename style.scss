@@ -1,0 +1,42 @@
+body {
+    background-color:beige;
+}
+#root {
+p,
+h1 {
+    font-family:  'Montserrat', sans-serif;
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform:translate(-50%, -50%);
+    font-size:48px;
+    
+    color: magenta;
+
+}
+ p {
+ font-weight: 200;
+}
+ h1 {
+font-weight: 600;
+}
+
+&.clicked {
+    h1 {
+        animation: right 4s infinite reverse;
+    }
+    p   {
+        animation: right 4s infinite;
+                
+    }
+
+    @keyframes right {
+        0% {
+            transform: rotate(0) translate(-50%, -50%);
+        }
+        100% {
+            transform: rotate(360deg) translate(-50%, -50%);
+        }
+    }
+  }
+}
